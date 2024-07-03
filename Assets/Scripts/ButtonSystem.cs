@@ -25,4 +25,8 @@ public class ButtonSystem : MonoBehaviour
     public void onClickSettingsScreen(){
         Debug.Log("Clicked Settings Screen");
     }
+
+    public void onClickLoadLevel(int level){
+        Debug.Log($"Level {level} selected");
+    }
 }
