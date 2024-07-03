@@ -1,7 +1,16 @@
 fileFormatVersion: 2
-guid: c37eefc129adaaf43be1a46d9453c211
+guid: b37fbac0262d2e54d9c6d30bd9def8e5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1990751848629180373
+    second: Simple_Player_Idle 1_0
+  - first:
+      213: 5357576478527492520
+    second: Simple_Player_Idle 1_1
+  - first:
+      213: -3971202557601053173
+    second: Simple_Player_Idle 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +90,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
+    buildTarget: Win64
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -95,6 +104,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Linux64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,9 +161,31 @@ TextureImporter:
       name: Simple_Player_Idle
       rect:
         serializedVersion: 2
-        x: 6
+        x: 5
         y: 0
-        width: 20
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d79e75424290ab10800000000000000
+      internalID: 1990751848629180373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simple_Player_Idle 1_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 22
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -136,21 +193,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0fcd4dd3ac90d4242947b2d607076c84
-      internalID: 506813904
+      spriteID: 8a19e9beb6fe95a40800000000000000
+      internalID: 5357576478527492520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Simple_Player_Idle_1
+      name: Simple_Player_Idle 1_2
       rect:
         serializedVersion: 2
-        x: 38
+        x: 69
         y: 0
-        width: 20
+        width: 22
         height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -158,32 +215,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2f556547944a1a14ea37450e59b0d652
-      internalID: -1863094432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Simple_Player_Idle_2
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 0
-        width: 20
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63f86353a33a41547a4e12f734b7e9d4
-      internalID: -334292684
+      spriteID: b06011f605473e8c0800000000000000
+      internalID: -3971202557601053173
       vertices: []
       indices: 
       edges: []
@@ -192,7 +227,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8c975d1cdb30cf44d80e15afdbf63443
     internalID: 0
     vertices: []
     indices: 
@@ -202,9 +237,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Simple_Player_Idle: 506813904
-      Simple_Player_Idle_1: -1863094432
-      Simple_Player_Idle_2: -334292684
+      Simple_Player_Idle: 1990751848629180373
+      Simple_Player_Idle 1_1: 5357576478527492520
+      Simple_Player_Idle 1_2: -3971202557601053173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
