@@ -6,13 +6,33 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
+    public bool freeze = false;
+    // private bool alreadyEnabled;
 
     private void Start() {
+        // alreadyEnabled = true;
+        GameManager.Instance.RegisterPlayer(this);
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
-    private void Update()
-    {
+
+    // private void OnEnable() {
+    //     if(!alreadyEnabled &&!GameManager.Instance.playerPool.Contains(this)) {
+    //         GameManager.Instance.RegisterPlayer(this);
+    //         alreadyEnabled = true;
+    //     }
+    // }
+
+    // private void OnDisable() {
+    //     if(alreadyEnabled && GameManager.Instance.playerPool.Contains(this)){
+    //         GameManager.Instance.RemovePlayer(this);
+    //     }
+    // }
+
+    private void Update(){
+        if(freeze){
+            return;
+        }
         // Get input from keyboard
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");

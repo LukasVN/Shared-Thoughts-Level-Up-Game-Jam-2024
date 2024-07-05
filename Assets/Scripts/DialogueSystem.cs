@@ -17,14 +17,13 @@ public class DialogSequence{
 public class DialogueSystem : MonoBehaviour
 {
     public GameObject dialogBox;
-    public GameObject previousBoxIndicator;
     public TextMeshProUGUI dialogText;
     protected GameObject player;
     public DialogSequence[] dialogSequence; // Set this in the Inspector to define the sequence of dialogues
     protected DialogNode currentNode;
     protected int currentDialogIndex = 0;
     protected int dialogSequenceIndex = 0;
-    protected bool onDialogue;
+    public bool onDialogue;
     private bool isTyping = false;
     private bool isTextFullyRevealed = false;
     
@@ -34,8 +33,7 @@ public class DialogueSystem : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    protected virtual void Update()
-    {
+    protected virtual void Update(){
         if(isTyping){
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -43,27 +41,41 @@ public class DialogueSystem : MonoBehaviour
             }
             return;
         }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("Interact");
-            StartDialog();
+        else{
+            if (onDialogue && Input.GetKeyDown(KeyCode.F))
+            {
+                DisplayNextDialog();
+            }
         }
     }
 
-    private void StartDialog()
-    {
+    protected void StartDialog(){
         dialogBox.SetActive(true);
+        onDialogue = true;
+        if (!GameManager.Instance.playersFrozen)
+        {
+            GameManager.Instance.FreezeAllPlayers();
+        }
     }
 
-    protected void DisplayNextDialog()
-    {
+    protected void DisplayNextDialog(){
         if (currentDialogIndex < dialogSequence[dialogSequenceIndex].dialogue.Length)
         {
             currentNode = dialogSequence[dialogSequenceIndex].dialogue[currentDialogIndex];
             StartCoroutine(TypeText(currentNode.text));
+            currentDialogIndex++;
+            onDialogue = true;
+            if(!GameManager.Instance.playersFrozen){
+                GameManager.Instance.FreezeAllPlayers();
+            }
         }
         else
         {
+            onDialogue = false;
+            if (GameManager.Instance.playersFrozen)
+            {
+                GameManager.Instance.UnFreezeAllPlayers();
+            }
             EndDialog();
         }
     }
@@ -71,7 +83,6 @@ public class DialogueSystem : MonoBehaviour
     protected void EndDialog(){
         currentDialogIndex = 0;
         dialogSequenceIndex = 0;
-        previousBoxIndicator.SetActive(false);
         dialogBox.SetActive(false);
         onDialogue = false;
     }
