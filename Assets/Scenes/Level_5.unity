@@ -19756,8 +19756,8 @@ MonoBehaviour:
   completedScreen: {fileID: 8280136022681148711}
   playerPool: []
   playersFrozen: 0
-  musicText: {fileID: 0}
-  effectsText: {fileID: 0}
+  musicText: {fileID: 368024434764794927}
+  effectsText: {fileID: 2860661768345655760}
   levelPlayerCount: 4
   succesfulPlayers: 0
   nextLevel: End

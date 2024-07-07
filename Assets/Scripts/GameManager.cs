@@ -20,6 +20,13 @@ public class GameManager : MonoBehaviour
     }
 
     void Start(){
+        if(PlayerPrefs.GetString("MuteMusic") == "Muted"){
+            musicText.text = "Unmute Music";
+        }
+        if(PlayerPrefs.GetString("MuteEffects") == "Muted"){
+            effectsText.text = "Unmute SFX";
+        }
+        
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 61;
         

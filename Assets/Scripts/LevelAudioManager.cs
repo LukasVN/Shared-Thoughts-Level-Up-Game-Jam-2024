@@ -13,8 +13,20 @@ public class LevelAudioManager : MonoBehaviour
     }
     void Start()
     {
-        // musicSource = GetComponent<AudioSource>();
-        // effectsSource = GetComponent<AudioSource>();
+
+        if(PlayerPrefs.GetString("MuteMusic") == "Muted"){
+                musicSource.volume = 0;
+        }
+        else{
+            PlayerPrefs.SetString("MuteMusic","Unmuted");
+        }
+        
+        if(PlayerPrefs.GetString("MuteEffects") == "Muted"){
+            effectsSource.volume = 0;
+        }
+        else{
+            PlayerPrefs.SetString("MuteEffects","Unmuted");
+        }
         musicSource.clip = audioClips[Random.Range(0, audioClips.Count)];
         musicSource.Play();
     }
@@ -27,18 +39,22 @@ public class LevelAudioManager : MonoBehaviour
 
     public void HandleMuteMusic(){
         if(musicSource.volume == 0){
+            PlayerPrefs.SetString("MuteMusic","UnMuted");
             musicSource.volume = 0.2f;
         }
         else{
+            PlayerPrefs.SetString("MuteMusic","Muted");
             musicSource.volume = 0;
         }
     }
 
     public void HandleMuteEffects(){
         if(effectsSource.volume == 0){
-            effectsSource.volume = 0.2f;
+            PlayerPrefs.SetString("MuteEffects","UnMuted");
+            effectsSource.volume = 0.5f;
         }
         else{
+            PlayerPrefs.SetString("MuteEffects","UnMuted");
             effectsSource.volume = 0;
         }
         
