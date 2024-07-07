@@ -19,13 +19,10 @@ public class LevelAudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    void Update()
-    {
-        
-    }
-
     public void PlayEffectSound(AudioClip effect){
-        effectsSource.PlayOneShot(effect);
+        if(effectsSource != null){
+            effectsSource.PlayOneShot(effect);
+        }
     }
 
     public void HandleMuteMusic(){

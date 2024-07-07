@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public int levelPlayerCount;
     public int succesfulPlayers = 0;
     public string nextLevel;
-    public GameObject endingScreen;
 
     private void Awake() {
         Instance = this;
@@ -54,6 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetAllPlayers(){
         foreach(PlayerMovement player in playerPool){
+            player.gameObject.SetActive(true);
             player.ResetPosition();
             succesfulPlayers = 0;
         }
@@ -89,7 +89,6 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel(){
         if(nextLevel == "End"){
-            endingScreen.SetActive(true);
             return;
         }
         SceneManager.LoadScene(nextLevel);

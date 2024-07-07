@@ -18,7 +18,6 @@ public class PreassurePlate : MonoBehaviour
     //Obstacle remover options
     public bool obstacleManager;
     public List<GameObject> obstacles = new List<GameObject>();
-    public List<GameObject> removedObstacles = new List<GameObject>();
     
     //Sound
     public AudioClip pressedPlate;
@@ -82,21 +81,21 @@ public class PreassurePlate : MonoBehaviour
     }
 
     private void RemoveObstacles(){
-        foreach (GameObject obstacle in obstacles){
-            obstacle.SetActive(false);
+        if(obstacles.Count >0){
+            foreach (GameObject obstacle in obstacles){
+                obstacle.SetActive(false);
+            }
         }
-        foreach (GameObject removedObstacle in removedObstacles){
-            removedObstacle.SetActive(true);
-        }
+        
     }
 
     private void ActivateObstacles(){
-        foreach (GameObject obstacle in obstacles){
-            obstacle.SetActive(true);
+        if(obstacles.Count >0){
+            foreach (GameObject obstacle in obstacles){
+                obstacle.SetActive(true);
+            }
         }
-        foreach (GameObject removedObstacle in removedObstacles){
-            removedObstacle.SetActive(false);
-        }
+
     }
 
     

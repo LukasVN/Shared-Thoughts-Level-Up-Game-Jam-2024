@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject cooldownBar;
     public Slider cooldownSlider;
     private bool onCooldown;
+    private bool reachedTP;
 
     //Sounds
     public AudioClip deathSound;
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip tpSound;
 
     private void Start() {
-
+        reachedTP = false;
         spawnPoint = transform.position;
         spriteRenderer = GetComponent<SpriteRenderer>();
         GameManager.Instance.RegisterPlayer(this);
@@ -108,9 +109,14 @@ public class PlayerMovement : MonoBehaviour
                 GameManager.Instance.ResetAllPlayers();
             break;
             case "EndLevel_Tp":
-                GameManager.Instance.SuccesfullPlayerRoom();
-                LevelAudioManager.Instance.PlayEffectSound(tpSound);
-                StartCoroutine("FadeOutAnimation");
+                if(!reachedTP){
+                    transform.position = other.transform.position + new Vector3(0,0.5f,0);
+                    GameManager.Instance.SuccesfullPlayerRoom();
+                    LevelAudioManager.Instance.PlayEffectSound(tpSound);
+                    StartCoroutine("FadeOutAnimation");
+                    reachedTP = true;
+                    GetComponent<BoxCollider2D>().enabled = false;
+                }
             break;
         }
     }
@@ -198,10 +204,21 @@ public class PlayerMovement : MonoBehaviour
 
         freeze = false;
 
+        if(!GetComponent<BoxCollider2D>().enabled){
+            GetComponent<BoxCollider2D>().enabled = true;
+        }
+
     }
 
     public void ResetPosition(){
-        StartCoroutine("DeathAnimation");
+        reachedTP = false;
+        freeze = false;
+        Color spriteColor = spriteRenderer.color;
+        spriteColor.a = 1f;
+        spriteRenderer.color = spriteColor;
+        if(gameObject.activeSelf){
+            StartCoroutine("DeathAnimation");
+        }
     }
 }
 

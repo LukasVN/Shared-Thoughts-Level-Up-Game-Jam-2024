@@ -1283,6 +1283,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: BackToMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1481759267023775573, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481759267023775573, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481759267023775573, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1754290132520611023, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1374,6 +1386,34 @@ PrefabInstance:
     - target: {fileID: 6318742947527797255, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MuteMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672363991170568477, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672363991170568477, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672363991170568477, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672363991170568477, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Colors.m_PressedColor.a
+      value: 0.8235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672363991170568477, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672363991170568477, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672363991170568477, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8672363991170568477, guid: c5b7d1cdfa64e014bafd891fd49ee0e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
