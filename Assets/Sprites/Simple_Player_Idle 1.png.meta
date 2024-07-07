@@ -158,37 +158,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Simple_Player_Idle
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 0
-        width: 22
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d79e75424290ab10800000000000000
-      internalID: 1990751848629180373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Simple_Player_Idle 1_1
       rect:
         serializedVersion: 2
-        x: 37
+        x: 32
         y: 0
-        width: 22
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -205,12 +183,12 @@ TextureImporter:
       name: Simple_Player_Idle 1_2
       rect:
         serializedVersion: 2
-        x: 69
+        x: 64
         y: 0
-        width: 22
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,6 +197,28 @@ TextureImporter:
       bones: []
       spriteID: b06011f605473e8c0800000000000000
       internalID: -3971202557601053173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simple_Player_Idle 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea3a01ac358c0347b4677053a844df2
+      internalID: -662542576
       vertices: []
       indices: 
       edges: []
@@ -237,7 +237,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Simple_Player_Idle: 1990751848629180373
+      Simple_Player_Idle 1_0: -662542576
       Simple_Player_Idle 1_1: 5357576478527492520
       Simple_Player_Idle 1_2: -3971202557601053173
   mipmapLimitGroupName: 

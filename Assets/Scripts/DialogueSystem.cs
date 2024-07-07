@@ -21,8 +21,8 @@ public class DialogueSystem : MonoBehaviour
     protected GameObject player;
     public DialogSequence[] dialogSequence; // Set this in the Inspector to define the sequence of dialogues
     protected DialogNode currentNode;
-    protected int currentDialogIndex = 0;
-    protected int dialogSequenceIndex = 0;
+    public int currentDialogIndex = 0;
+    public int dialogSequenceIndex = 0;
     public bool onDialogue;
     private bool isTyping = false;
     private bool isTextFullyRevealed = false;
@@ -49,7 +49,7 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    protected void StartDialog(){
+    public void StartDialog(){
         dialogBox.SetActive(true);
         onDialogue = true;
         if (!GameManager.Instance.playersFrozen)
@@ -58,7 +58,7 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    protected void DisplayNextDialog(){
+    public void DisplayNextDialog(){
         if (currentDialogIndex < dialogSequence[dialogSequenceIndex].dialogue.Length)
         {
             currentNode = dialogSequence[dialogSequenceIndex].dialogue[currentDialogIndex];
@@ -80,7 +80,7 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    protected void EndDialog(){
+    public void EndDialog(){
         currentDialogIndex = 0;
         dialogSequenceIndex = 0;
         dialogBox.SetActive(false);

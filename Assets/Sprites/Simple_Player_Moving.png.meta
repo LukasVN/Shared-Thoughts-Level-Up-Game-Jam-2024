@@ -123,37 +123,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Simple_Player_Moving
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 0
-        width: 20
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1880d55e70fa13c4684ecf26b7fa653a
-      internalID: -787268785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Simple_Player_Moving_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 32
         y: 0
-        width: 20
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,12 +148,12 @@ TextureImporter:
       name: Simple_Player_Moving_2
       rect:
         serializedVersion: 2
-        x: 70
+        x: 64
         y: 0
-        width: 20
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -192,12 +170,12 @@ TextureImporter:
       name: Simple_Player_Moving_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 96
         y: 0
-        width: 20
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,12 +192,12 @@ TextureImporter:
       name: Simple_Player_Moving_4
       rect:
         serializedVersion: 2
-        x: 134
+        x: 128
         y: 0
-        width: 20
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -228,6 +206,28 @@ TextureImporter:
       bones: []
       spriteID: b4cdd9b452dca804799acd8930f08b00
       internalID: -1595105038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Simple_Player_Moving_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733ab5121633ba842a4df6a1c3e027cc
+      internalID: -649987908
       vertices: []
       indices: 
       edges: []
@@ -246,7 +246,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Simple_Player_Moving: -787268785
+      Simple_Player_Moving_0: -649987908
       Simple_Player_Moving_1: 1319901098
       Simple_Player_Moving_2: -1632552683
       Simple_Player_Moving_3: -1366526458

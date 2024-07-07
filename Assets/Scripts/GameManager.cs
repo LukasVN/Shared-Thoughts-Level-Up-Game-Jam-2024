@@ -6,27 +6,19 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public List<PlayerMovement> playerPool;
     public bool playersFrozen;
-    public GameObject test1;
-    public GameObject test2;
 
     private void Awake() {
         Instance = this;
     }
 
-    void Start()
-    {
+    void Start(){
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 61;
         
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.P)){
-            test1.SetActive(true);
-            test2.SetActive(true);
-            if(DialogueManager.Instance.onDialogue){
-                FreezeAllPlayers();
-            }
-        }
+    void Update(){
+
     }
 
     public void RegisterPlayer(PlayerMovement player){
@@ -48,6 +40,12 @@ public class GameManager : MonoBehaviour
         playersFrozen = false;
         foreach(PlayerMovement player in playerPool){
             player.freeze = false;
+        }
+    }
+
+    public void ResetAllPlayers(){
+        foreach(PlayerMovement player in playerPool){
+            player.ResetPosition();
         }
     }
 
