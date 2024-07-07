@@ -4762,7 +4762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I approbe you as a qualified test subject
+  m_text: I approve you as a qualified test subject
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e7a06890a0a61bd43b214ed0b67b3d2c, type: 2}
   m_sharedMaterial: {fileID: 4586028055117997056, guid: e7a06890a0a61bd43b214ed0b67b3d2c, type: 2}
