@@ -17,6 +17,9 @@ public class PuzzleButton : MonoBehaviour
     public bool obstacleManager;
     public List<GameObject> obstacles = new List<GameObject>();
     public List<GameObject> removedObstacles = new List<GameObject>();
+
+    //Sound
+    public AudioClip pressedButton;
     void Start(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         redState = spriteRenderer.sprite;
@@ -26,6 +29,7 @@ public class PuzzleButton : MonoBehaviour
         if(other.transform.tag == "Player" && spriteRenderer.sprite == redState){
             //Sound goes here
             spriteRenderer.sprite = greenState;
+            LevelAudioManager.Instance.PlayEffectSound(pressedButton);
             if(crateSpawner){
                 SpawnCrate();
             }
@@ -36,6 +40,7 @@ public class PuzzleButton : MonoBehaviour
         else if(other.transform.tag == "Player" && spriteRenderer.sprite == greenState){
             //Sound goes here
             spriteRenderer.sprite = redState;
+            LevelAudioManager.Instance.PlayEffectSound(pressedButton);
             if(crateSpawner){
                 Destroy(spawnedCrate);
             }

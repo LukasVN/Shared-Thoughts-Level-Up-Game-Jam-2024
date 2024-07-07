@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     private Vector2 spawnPoint;
-    private float initialMoveSpeed;
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
@@ -17,10 +16,14 @@ public class PlayerMovement : MonoBehaviour
     public Slider cooldownSlider;
     private bool onCooldown;
 
+    //Sounds
+    public AudioClip deathSound;
+    public AudioClip pressedStop;
+    public AudioClip tpSound;
+
     private void Start() {
 
         spawnPoint = transform.position;
-        initialMoveSpeed = moveSpeed;
         spriteRenderer = GetComponent<SpriteRenderer>();
         GameManager.Instance.RegisterPlayer(this);
         rb = GetComponent<Rigidbody2D>();
@@ -95,17 +98,18 @@ public class PlayerMovement : MonoBehaviour
         switch (other.tag)
         {
             case "Stop": 
-                //Sound and indicator
                 ResetAnimations();
+                LevelAudioManager.Instance.PlayEffectSound(pressedStop);
                 transform.position = other.transform.position + new Vector3(0,1,0);
                 StartCoroutine(StopPlayer(cooldownSlider.maxValue));
             break;
             case "Spikes": 
-                //Death sound
+                LevelAudioManager.Instance.PlayEffectSound(deathSound);
                 GameManager.Instance.ResetAllPlayers();
             break;
             case "EndLevel_Tp":
-                // Tp sound
+                GameManager.Instance.SuccesfullPlayerRoom();
+                LevelAudioManager.Instance.PlayEffectSound(tpSound);
                 StartCoroutine("FadeOutAnimation");
             break;
         }

@@ -19,6 +19,9 @@ public class PreassurePlate : MonoBehaviour
     public bool obstacleManager;
     public List<GameObject> obstacles = new List<GameObject>();
     public List<GameObject> removedObstacles = new List<GameObject>();
+    
+    //Sound
+    public AudioClip pressedPlate;
 
     void Start()
     {
@@ -31,6 +34,7 @@ public class PreassurePlate : MonoBehaviour
             playerIn = true;
             if(spriteRenderer.sprite != pressedState){
                 spriteRenderer.sprite = pressedState;
+                LevelAudioManager.Instance.PlayEffectSound(pressedPlate);
                 if(obstacleManager){
                     RemoveObstacles();
                 }
@@ -43,6 +47,7 @@ public class PreassurePlate : MonoBehaviour
             activated = true;
             if(spriteRenderer.sprite != pressedState){
                 spriteRenderer.sprite = pressedState;
+                LevelAudioManager.Instance.PlayEffectSound(pressedPlate);
                 if(obstacleManager){
                     RemoveObstacles();
                 }
@@ -62,6 +67,7 @@ public class PreassurePlate : MonoBehaviour
         }
         if(!playerIn && !activated && spriteRenderer.sprite != unpressedState){
             spriteRenderer.sprite = unpressedState;
+            LevelAudioManager.Instance.PlayEffectSound(pressedPlate);
             if(obstacleManager){
                 ActivateObstacles();
             }

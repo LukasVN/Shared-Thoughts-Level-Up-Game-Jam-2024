@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8931514782555922637}
   - component: {fileID: 2814174614977257060}
   - component: {fileID: 1648032046351025524}
+  - component: {fileID: 7866498221056715399}
   m_Layer: 0
   m_Name: Preasure_Plate
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,3 +135,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7588608, y: 0.89039135}
   m_EdgeRadius: 0
+--- !u!114 &7866498221056715399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3356641085493618166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9bb2b4ff062884e8edec1f03f2e8c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressedState: {fileID: 1646643818, guid: d50973b919a05fe47a7ec257538cc729, type: 3}
+  crateSpawner: 0
+  crateSpawnpoint: {fileID: 0}
+  crate: {fileID: 0}
+  obstacleManager: 1
+  obstacles:
+  - {fileID: 0}
+  removedObstacles:
+  - {fileID: 0}
+  pressedPlate: {fileID: 8300000, guid: 2428ae6f38d156a4587dd70ba885ca20, type: 3}

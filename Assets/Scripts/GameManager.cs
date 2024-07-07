@@ -1,11 +1,20 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public GameObject completedScreen;
     public List<PlayerMovement> playerPool;
     public bool playersFrozen;
+    public TextMeshProUGUI musicText;
+    public TextMeshProUGUI effectsText;
+    public int levelPlayerCount;
+    public int succesfulPlayers = 0;
+    public string nextLevel;
+    public GameObject endingScreen;
 
     private void Awake() {
         Instance = this;
@@ -46,6 +55,51 @@ public class GameManager : MonoBehaviour
     public void ResetAllPlayers(){
         foreach(PlayerMovement player in playerPool){
             player.ResetPosition();
+            succesfulPlayers = 0;
+        }
+    }
+
+    public void BackToMenu(){
+        SceneManager.LoadScene("Main_Menu");
+    }
+
+    public void ResetLevel(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void MuteMusic(){
+        if(musicText.text == "Unmute Music"){
+            musicText.text = "Mute Music";
+        }
+        else{
+            musicText.text = "Unmute Music";
+        }
+        LevelAudioManager.Instance.HandleMuteMusic();
+    }
+
+    public void MuteSFX(){
+        if(effectsText.text == "Unmute SFX"){
+            effectsText.text = "Mute SFX";
+        }
+        else{
+            effectsText.text = "Unmute SFX";
+        }
+        LevelAudioManager.Instance.HandleMuteEffects();
+    }
+
+    public void NextLevel(){
+        if(nextLevel == "End"){
+            endingScreen.SetActive(true);
+            return;
+        }
+        SceneManager.LoadScene(nextLevel);
+    }
+
+    public void SuccesfullPlayerRoom(){
+        succesfulPlayers++;
+        if(succesfulPlayers == levelPlayerCount){
+            PlayerPrefs.SetString(SceneManager.GetActiveScene().name,"Completed");
+            completedScreen.SetActive(true);
         }
     }
 

@@ -491,6 +491,9 @@ MonoBehaviour:
   freeze: 0
   cooldownBar: {fileID: 808918095108902008}
   cooldownSlider: {fileID: 6120664229426212662}
+  deathSound: {fileID: 8300000, guid: fb4f9b742c19e3a4db8273b0569a2ae7, type: 3}
+  pressedStop: {fileID: 8300000, guid: 776fd2fde4f3bb149bf26fad15a4abb1, type: 3}
+  tpSound: {fileID: 8300000, guid: d49f2a8ca448a5f4e91e3dbabf7bdf0f, type: 3}
 --- !u!50 &5331208023992150374
 Rigidbody2D:
   serializedVersion: 4
