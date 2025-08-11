@@ -1,4 +1,4 @@
-Game solo-developed by LukkasVN
+Game solo-developed by Lucas Varela Negro
 
 
 External Assets:
